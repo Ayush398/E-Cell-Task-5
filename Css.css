@@ -1,0 +1,204 @@
+h1 {
+  margin-bottom: 45px;
+}
+
+/* ----------- Navigation Bar ------------- */
+
+nav {
+  background-color: rgb(221, 233, 255);
+  overflow: auto;
+  line-height: 36px;
+  position: sticky;
+  top: 0;
+  padding: 15px;
+  z-index: 1;
+}
+
+.navul {
+  list-style: none;
+}
+
+.navli {
+  float: left;
+  font-size: 26px;
+  margin-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #05007f;
+  font-family: Roboto, sans-serif;
+}
+
+a:hover {
+  color: red;
+}
+
+nav .nava {
+  text-decoration: underline rgb(252, 125, 252);
+}
+
+/* ----------- Scroll Indicator ------------- */
+
+#scroll {
+  position: fixed;
+  background: linear-gradient(90deg, rgb(211, 226, 255), violet);
+  top: 69px;
+  left: 0;
+  height: 20px;
+  width: 100px;
+  z-index: 1;
+}
+
+/* ----------- Home ------------- */
+
+#home {
+  text-align: center;
+  background-color: thistle;
+  margin-bottom: 30px;
+  height: 685px;
+  padding: 20px;
+}
+
+#name {
+  padding-top: 50px;
+  font-size: 45px;
+  color: #05007f;
+  font-weight: bold;
+}
+
+.homep {
+  font-size: 20px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  color: #05007f;
+}
+
+/* ----------- Section 1 ------------- */
+
+#section1,
+#section2,
+#section3 {
+  margin: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.button {
+  border-radius: 20px;
+  width: 90px;
+  height: 30px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+/* ----------- Section 2 ------------- */
+
+input [type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.toggler {
+  position: relative;
+  background: #4561ff;
+  margin: 40px;
+  margin-right: 100px;
+  -webkit-appearance: none;
+  display: flex;
+  width: 80px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.toggler::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  transform: translateY(-50%);
+  left: 5%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.toggler.toggler-active {
+  background-color: #fff;
+}
+
+.toggler.toggler-active::after {
+  background: #9dabff;
+  left: 65%;
+}
+
+.toggler.toggler:active ~ body {
+  background-color: #222;
+}
+
+body.active {
+  background-color: #222;
+  color: white;
+}
+
+.secp {
+  font-size: 18px;
+}
+
+.sech {
+  font-size: 22px;
+}
+
+/* ----------- Responsive ------------- */
+
+@media (max-width: 700px) {
+  #home {
+    overflow: hidden;
+  }
+
+  #section1,
+  #section2,
+  #section3 {
+    text-align: justify;
+  }
+
+  .secp {
+    font-size: 14px;
+  }
+  
+  .sech {
+    font-size: 18px;
+  }
+
+  .homep{
+    font-size: 16px;
+  }
+
+  #name{
+    font-size: 35px;
+  }
+
+  .navli{
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+  nav{
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 5px;
+  }
+
+  #scroll{
+    top: 48px;
+    width: 40px;
+    height: 13px;
+  }
+}
